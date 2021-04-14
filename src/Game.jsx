@@ -5,7 +5,7 @@ import './Game.css';
 
 const Game = () => {
   const [grid, setGrid] = useState();
-  const [current_player, setCurrentPlayer] = useState();
+  const [current_player, setCurrentPlayer] = useState('X');
   const [message, setMessage] = useState();
   const [game_finished, setGameFinished] = useState(false);
   const [game_loaded, setGameLoaded] = useState(false);
@@ -25,12 +25,12 @@ const Game = () => {
     setGrid(grid_copy);
     setCurrentPlayer(next_player);
 
-    checkGameResult(grid_copy);
+    checkGameResult(next_player);
   };
 
-  const checkGameResult = () => {
+  const checkGameResult = (next_player) => {
     const game_result = isGameFinished(grid);
-    if (!game_result) return setMessage(`It's ${current_player} turn`);
+    if (!game_result) return setMessage(`It's ${next_player} turn`);
 
     setGameFinished(true);
 
