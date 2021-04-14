@@ -1,0 +1,57 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 650px;
+  height: 650px;
+  border-radius: 10px;
+  border: 5px solid black;
+  background-color: black;
+  flex-flow: row wrap;
+}
+
+.row {
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.cell {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  font-size: 60px;
+}
+
+.cell:hover {
+  background-color: #bbf0ff;
+}
+
+.cell:focus-within {
+  background-color: #ffbbbb;
+}
+
+.cell-input {
+  position: absolute;
+  left: -999px;
+}
+
+.message {
+  margin: 20px;
+}
+
+.reset-button {
+  margin: 5px;
+}
