@@ -60,6 +60,10 @@ const Game = () => {
         <button className="reset-button" onClick={resetGame}>
           {game_finished ? 'New game' : 'Reset game'}
         </button>
+
+        <a className="source-button" href="https://github.com/vitorascorrea/ReactTicTacToe" target="_blank" rel="noreferrer">
+          Source
+        </a>
       </div>
     )
   );
